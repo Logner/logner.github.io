@@ -40,36 +40,25 @@ header a, .nav-item, .old-item{
     text-decoration: none;
     padding: 20px 10px;
     font-weight: bolder;
-    transition: 0.5s;
 }
 
 header a:hover, .nav-item:hover, .old-item:hover, .hero-tagline a:hover, .section-content a:hover{
     color: var(--peach);
 
-    /*TODO: remove this, add this to only .old-item:hover */
-    background-color: var(--jade);
-}
+    /*TODO: remove this, add this to only .old-item:hover */}
 
 header h1{
     padding: 3px 50px;
     overflow: hidden;
 
     /*TODO: remove everything below this upto flex-box to return to original style */
-    background-color: var(--light);
-    transition: 0.5s;
 }
 
 header h1 a {
-    color: var(--dark-brown);
-    transition: 0.5s;
-}
-
-header h1:hover {
-    background-color: var(--jade);
+    color: var(--light);
 }
 
 header h1:hover > a{
-    background-color: var(--jade);
     color: var(--peach);
 }
 
@@ -107,6 +96,10 @@ nav ul{
     text-align: right;
 }
 
+.old li:hover{
+    background-color: var(--jade);
+}
+
 /* Hero Styling */
 #hero{
     width: 100%;
@@ -131,6 +124,7 @@ nav ul{
     transition: 0.5s;
 }
 
+
 /* Content Styling */
 body {
     background-color: var(--light);
@@ -151,6 +145,10 @@ section {
 
 section > div {
     padding: 10px;
+}
+
+section > .section-content a:hover, .hero-tagline a:hover {
+    background-color: var(--jade);
 }
 
 .section-title {
