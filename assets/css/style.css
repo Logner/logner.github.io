@@ -20,7 +20,7 @@ header{
     background-color:var(--dark-brown);
 
     width: 100%;
-    font-size: 16px;
+    font-size: 1rem;
     align-content: center;
 
     display: flex;
@@ -154,7 +154,7 @@ section > .section-content a:hover, .hero-tagline a:hover {
 .section-title {
     flex: 1 20%;
     color: var(--dark-brown);
-    font-size: 20px;
+    font-size: 1.4rem;
     font-weight: bolder;
 
 }
@@ -162,7 +162,7 @@ section > .section-content a:hover, .hero-tagline a:hover {
 .section-content {
     flex: 4 80%;
     color: var(--dark-brown);
-    font-size: 15px;
+    font-size: 0.95rem;
     line-height: 1.5;
 
     border-left: 5px solid var(--dark-brown);
@@ -173,7 +173,7 @@ section > .section-content a:hover, .hero-tagline a:hover {
     text-decoration: none;
     color: var(--lighter-brown);
     font-weight: bolder;
-    font-size: 15px;
+    font-size: 0.95rem;
     transition: 0.5s
 }
 
@@ -193,19 +193,28 @@ footer .section-content a{
 
 .work-grid-item{
     min-height: 20vh;
-    min-width: 20vh;
+    min-width: 20vw;
 }
 
 /* Grid item bg images and sizes */
+.code-quiz{
+    background-image: url('../img/previews/code-quiz.png');
+    background-size: cover;
+    background-position-y: top;
+    background-position-x: center;
+    grid-row: 1 / span 2;
+    grid-column: 3;
+}
+
 .pwd-gen{
-    background-image: url('../img/pwd-gen.png');
+    background-image: url('../img/previews/pwd-gen.png');
     background-size: cover;
     background-position-y: top;
     background-position-x: center;
 }
 
 .run-buddy{
-    background-image: url('../img/run-buddy.png');
+    background-image: url('../img/previews/run-buddy.png');
     background-size: cover;
     background-position-y: top;
     grid-row: 1 / span 2;
@@ -215,33 +224,33 @@ footer .section-content a{
 }
 
 .horiseon{
-    background-image: url('../img/horiseon.png');
+    background-image: url('../img/previews/horiseon.png');
     background-size: cover;
     background-position-y: top;
 }
 
 .battletank{
-    background-image: url('../img/battle-tank.jpg');
+    background-image: url('../img/previews/battle-tank.jpg');
     background-size: cover;
     background-position-y: center;
 }
 
 .fire-particles{
-    background-image: url('../img/fire-particles.png');
+    background-image: url('../img/previews/fire-particles.png');
     background-size: cover;
     background-position-y: bottom;
     grid-row: span 2;
 }
 
 .recaman{
-    background-image: url('../img/recaman.png');
+    background-image: url('../img/previews/recaman.png');
     background-size: cover;
     background-position-y: center;
     grid-column: span 2;
 }
 
 .cobalt{
-    background-image: url('../img/cobalt.jpg');
+    background-image: url('../img/previews/cobalt.jpg');
     background-size: cover;
     grid-column: span 2;
 }
@@ -276,7 +285,7 @@ footer .section-content a{
 .overlay h4{
     position: relative;
     padding-right: 20px;;
-    font-size: 20px;
+    font-size: 1.4rem;
     color: var(--dark-brown);
     background-color: rgba(255,255,255,0.6)
 }
@@ -284,7 +293,7 @@ footer .section-content a{
 .overlay h5 {
     position: relative;
     padding-right: 20px;
-    font-size: 15px;
+    font-size: 0.95rem;
     color:var(--teal);
     background-color: rgba(255,255,255,0.6)
 }
@@ -345,8 +354,8 @@ footer ul li{
 @media screen and (min-width: 980px){
     /* Reshuffling grid for large screens */
     #work .section-content{
-        grid-template-rows: repeat(3, 1fr);
         grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
     }
 
     .horiseon {
@@ -400,17 +409,17 @@ footer ul li{
     }
 
     .mobile h4 {
-        font-size: 15px;
+        font-size: 0.95rem;
         color:var(--dark-brown);
     }
 
     .mobile h5 {
-        font-size: 12px;
+        font-size: 0.8rem;
         color:var(--teal);
     }
 
     #contact .section-title {
-        font-size: 15px;
+        font-size: 0.95rem;
     }
 
     /* resizing grid */
@@ -422,20 +431,34 @@ footer ul li{
 
 @media screen and (max-width: 500px) {
 
+    section{
+        width: 100%;
+    }
+
     /* Reshuffling grid for smaller screens */
     #work .section-content{
-        grid-template-rows: repeat(8, 1fr);
         grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+    }
+
+    .run-buddy {
+        grid-row: span 2;
+        grid-column: span 1;
     }
 
     .battletank {
         grid-row: span 2;
     }
 
+    .code-quiz {
+        grid-row: 1;
+        grid-column: span 2;
+    }
+
     /* Optimizing contact me for smaller screens */
 
     #contact .section-title {
-        font-size: 15px;
+        font-size: 0.95rem;
     }
 
 
@@ -447,4 +470,23 @@ footer ul li{
     }
 
 
+}
+@media screen and (max-height: 700px), (max-width: 500px) {
+    * {
+        font-size: 95%;
+        word-wrap: break-word;
+    }
+    header a, .nav-item, .old-item{
+        padding: 0.3rem 0rem;
+    }
+    header ul li{
+        background: var(--brown);
+    }
+    header ul li a{
+        padding: 0rem 0.3rem;
+        font-size: 75%
+    }
+    header h1 a {
+        font-size: 125%;
+    }
 }
