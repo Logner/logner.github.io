@@ -201,6 +201,7 @@ footer .section-content a{
     background-image: url('../img/pwd-gen.png');
     background-size: cover;
     background-position-y: top;
+    background-position-x: center;
 }
 
 .run-buddy{
